@@ -1,0 +1,61 @@
+.footer {
+  font-size: 0.875rem;
+
+  h3 {
+    color: darken($color-light, 20%);
+
+    &::first-letter {
+      color: $color-accent;
+    }
+  }
+
+  ul {
+    padding-left: $gap * 2;
+
+    list-style: none;
+  }
+
+  li {
+    position: relative;
+
+    &::before {
+      position: absolute;
+
+      margin-left: -30px;
+
+      content: "\f30b";
+
+      color: darken($color-light, 30%);
+
+      font-family: $font-icon;
+      font-weight: 900;
+    }
+  }
+
+  p {
+    color: darken($color-light, 30%);
+  }
+
+  a {
+    color: darken($color-light, 30%);
+
+    &:hover,
+    &:focus {
+      color: $color-light;
+    }
+  }
+
+  &__top {
+    padding-top: $gap * 3;
+    padding-bottom: $gap * 2;
+
+    background-color: lighten($color-dark, 15.25%);
+  }
+
+  &__bottom {
+    padding-top: $gap * 2;
+    padding-bottom: $gap * 2;
+
+    background-color: lighten($color-dark, 20%);
+  }
+}

@@ -1,0 +1,35 @@
+.features {
+  background-color: darken($color-light, 10%);
+
+  @extend %section;
+
+  &__title {
+    @extend %section-title;
+  }
+
+  &__description {
+    @extend %section-description;
+  }
+}
+
+.feature {
+  margin-bottom: $gap / 2;
+  padding-top: $gap / 2;
+
+  &__icon {
+    @include md-min {
+      @include icon;
+    }
+    @include md {
+      @include icon(34px, 1.5rem);
+    }
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__description {
+    text-align: center;
+  }
+}

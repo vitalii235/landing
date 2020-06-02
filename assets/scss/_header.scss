@@ -1,0 +1,45 @@
+.header-navbar {
+  transition: background-color 0.5s, padding 0.25s;
+
+  @include lg-min {
+    padding: $gap 0;
+
+    background-color: transparent;
+  }
+  @include lg {
+    background-color: rgba($color-dark, 0.85);
+  }
+
+  .nav-item {
+    @extend %link-border-not-active-on-hover;
+  }
+
+  .nav-link {
+    position: relative;
+
+    overflow: hidden;
+
+    @include lg-min {
+      padding-top: $gap;
+      padding-bottom: $gap;
+    }
+    @extend %link-border;
+  }
+}
+
+.header-navbar--scrolled {
+  @include lg-min {
+    padding: 0;
+
+    background-color: rgba($color-dark, 0.85);
+  }
+
+  .active {
+    .nav-link {
+      color: $color-accent !important;
+      text-shadow: 0 0 1px $color-accent;
+
+      @extend %link-border-active;
+    }
+  }
+}

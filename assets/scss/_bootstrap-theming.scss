@@ -1,0 +1,56 @@
+.navbar-expand-lg {
+  @include lg-sm {
+    > .container,
+    > .container-fluid {
+      padding-right: $gap;
+      padding-left: $gap;
+    }
+  }
+  .navbar-nav {
+    .nav-item {
+      padding-right: $gap / 2;
+      padding-left: $gap / 2;
+    }
+
+    .nav-link {
+      padding-right: $gap / 2;
+      padding-left: $gap / 2;
+
+      color: $color-light;
+
+      @include lg {
+        text-align: center;
+      }
+    }
+  }
+}
+
+.navbar-dark {
+  .navbar-toggler {
+    border-color: rgba($color-light, 0.75);
+
+    &-icon {
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.75)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+    }
+  }
+}
+
+.progress {
+  @include lg-min {
+    height: $gap * 4 / 3;
+  }
+}
+
+.bg-danger {
+  background-color: $color-accent !important;
+}
+
+.btn-outline-danger {
+  color: $color-accent;
+  border-color: $color-accent !important;
+
+  &:hover,
+  &:focus {
+    background-color: $color-accent;
+  }
+}
